@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  builder:
+    build: .
+    image: foo
+    environment:
+      - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+      - ROLE_ARN=$ROLE_ARN
+      - REGION=$REGION
+      - EXTERNAL_ID=$EXTERNAL_ID
+    volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+
