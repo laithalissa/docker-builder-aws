@@ -8,5 +8,6 @@ RUN apk add --update --no-cache curl bash python3 docker \
   && rm -r /usr/lib/python*/ensurepip \
   && pip3 install --upgrade pip setuptools awscli  \
   && rm -rf /var/cache/apk/* \
-  && rm -r /root/.cache 
+  && rm -r /root/.cache \
+  && chmod +x /usr/bin/configure-aws.sh
 
