@@ -3,10 +3,10 @@ services:
 - docker
 script:
 - export REPO=heartysoft/docker-builder-aws
-- docker build -t $REPO:latest .
+- ./build.sh 
 deploy:
   provider: script
-  script: docker tag $REPO:latest $REPO:$TRAVIS_TAG && docker login -e="$DOCKER_EMAIL"
+  script: docker login -e="$DOCKER_EMAIL"
     -u="$DOCKER_USER" -p="$DOCKER_PASS" && docker push $REPO
   on:
     tags: true
