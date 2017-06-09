@@ -5,7 +5,9 @@ A docker container based on alpine with aws cli, and docker installed. Use this 
 
 # containers
 
-* heartysoft/docker-builder-aws:[version]  - python, aws-cli, scripts to configure assume role account, etc.
-* heartysoft/docker-builder-aws:[version]-node - as above, but with node and yarn installed. 
+* heartysoft/docker-builder-aws:[version]  
+python, aws-cli, scripts to configure assume role account, etc.
+* heartysoft/docker-builder-aws:[version]-node 
+as above, but with node and yarn installed. 
 
 [https://hub.docker.com/r/heartysoft/docker-builder-aws/](https://hub.docker.com/r/heartysoft/docker-builder-aws/) 
