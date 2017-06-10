@@ -1,4 +1,4 @@
-[![travis](https://travis-ci.org/heartysoft/docker-builder-aws.svg?branch=master)](https://travis-ci.org/heartysoft/docker-builder-aws.svg?branch=master)
+[![travis](https://travis-ci.org/heartysoft/docker-builder-aws.svg?branch=master)](https://travis-ci.org/heartysoft/docker-builder-aws)
 
 # docker-builder-aws
 A docker container based on alpine with aws cli, and docker installed. Use this to build containers, while using AWS services (e.g. push to ECR).
