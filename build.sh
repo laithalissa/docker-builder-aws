@@ -8,5 +8,5 @@ docker build -t $REPO:latest .
 docker tag $REPO:latest $REPO:$TAG_TO_USE
 docker build -t $REPO:latest-node -f DockerfileNode .
 docker tag $REPO:latest-node $REPO:$TAG_TO_USE-node
-docker build -t $REPO:latest-helm -f DockerfileHelm .
-docker tag $REPO:latest-helm $REPO:$TAG_TO_USE-helm
+docker build -t $REPO:latest-node -f DockerfileHelm .
+docker tag $REPO:latest-node $REPO:$TAG_TO_USE-helm
