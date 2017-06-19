@@ -15,6 +15,7 @@ echo "setting up helm..."
 
 SSL_CA_BUNDLE_FILE=/etc/ssl/certs/ca-certificates.crt
 HELM_CERT_LOCATION=/usr/local/certificates
+export HELM_REPO=helmet
 export HELM_REPO_CRT_FILE=$HELM_CERT_LOCATION/client.crt
 export HELM_REPO_KEY_FILE=$HELM_CERT_LOCATION/client.key
 
@@ -23,6 +24,6 @@ echo $HELM_REPO_CRT | base64 -d > $HELM_REPO_CRT_FILE
 echo $HELM_REPO_KEY | base64 -d > $HELM_REPO_KEY_FILE
 
 helm init --client-only
-helm repo add helmet $HELM_REPO_URL/charts/ --ca-file $SSL_CA_BUNDLE_FILE --cert-file $HELM_REPO_CRT_FILE --key-file $HELM_REPO_KEY_FILE
+helm repo add $HELM_REPO $HELM_REPO_URL/charts/ --ca-file $SSL_CA_BUNDLE_FILE --cert-file $HELM_REPO_CRT_FILE --key-file $HELM_REPO_KEY_FILE
 
 echo ""
