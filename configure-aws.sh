@@ -6,7 +6,7 @@ mkdir -p ~/.aws
 
 rm -rf ~/.aws/*
 
-echo "[profile builder]" >> ~/.aws/config
+echo "[default]" >> ~/.aws/config
 echo "region=$REGION" >> ~/.aws/config
 echo "role_arn=$ROLE_ARN" >> ~/.aws/config
 echo "source_profile=builder" >> ~/.aws/config
