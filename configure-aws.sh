@@ -11,6 +11,13 @@ echo "region=$REGION" >> ~/.aws/config
 echo "role_arn=$ROLE_ARN" >> ~/.aws/config
 echo "source_profile=builder" >> ~/.aws/config
 
+echo "" >> ~/.aws/config
+
+echo "[profile builder]" >> ~/.aws/config
+echo "region=$REGION" >> ~/.aws/config
+echo "role_arn=$ROLE_ARN" >> ~/.aws/config
+echo "source_profile=builder" >> ~/.aws/config
+
 if [ "x$EXTERNAL_ID" != "x" ]; then
   echo "external_id=$EXTERNAL_ID" >> ~/.aws/config
 fi
