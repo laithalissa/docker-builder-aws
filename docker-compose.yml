@@ -2,7 +2,9 @@ version: "3"
 
 services:
   builder:
-    build: .
+    build: 
+      context: .
+      dockerfile: DockerfileHelm
     image: foo
     environment:
       - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID

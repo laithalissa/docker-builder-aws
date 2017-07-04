@@ -1,7 +1,7 @@
 FROM heartysoft/docker-builder-aws:latest
 
 ENV KUBE_VERSION 1.6.4
-ENV HELM_VERSION 2.4.2
+ENV HELM_VERSION 2.5.0
 
 COPY configure-helm.sh /usr/bin/
 
@@ -16,4 +16,8 @@ RUN apk update \
  && chmod +x /usr/bin/configure-helm.sh \
  && rm -rf /tmp/helm \
  && rm -rf /var/cache/apk/* \
+ && echo ". /usr/bin/configure-helm.sh" > /root/.ashrc \
+ && echo ". /usr/bin/configure-helm.sh" > /root/.bashrc \
  && rm -rf /root/.cache
+
+ENV ENV="/root/.ashrc"
