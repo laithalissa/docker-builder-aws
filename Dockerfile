@@ -3,7 +3,10 @@ FROM alpine:latest
 
 COPY configure-aws.sh /usr/bin/
 
-RUN apk add --update --no-cache curl bash python3 docker \
+RUN apk add --update --no-cache curl bash python3 docker libintl \
+  && apk add --virtual gt gettext \ 
+  && cp /usr/bin/envsubst /usr/local/bin/envsubst \
+  && apk del gt \
   && python3 -m ensurepip \
   && ln -s /usr/bin/pip3 /usr/bin/pip \
   && ln -s /usr/bin/python3 /usr/bin/python \
