@@ -43,10 +43,10 @@ function export_chart_version {
 
 function export_environment {
   my_env=$1
-  export KUBE_CA_PEM=$((KUBE_CA_PEM_$my_env))
-  export KUBE_NAMESPACE=$((KUBE_NAMESPACE_$my_env))
-  export KUBE_TOKEN=$((KUBE_TOKEN_$my_env))
-  export RELEASE_NAME=$((RELEASE_NAME_$my_env))
+  export KUBE_CA_PEM=$(eval "echo \$KUBE_CA_PEM_$my_env")
+  export KUBE_NAMESPACE=$(eval "echo \$KUBE_NAMESPACE_$my_env")
+  export KUBE_TOKEN=$(eval "echo \$KUBE_TOKEN_$my_env")
+  export RELEASE_NAME=$(eval "echo \$RELEASE_NAME_$my_env")
 }
 
 function __replace_values {

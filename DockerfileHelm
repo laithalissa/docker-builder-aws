@@ -18,7 +18,6 @@ RUN apk update \
  && rm -rf /var/cache/apk/* \
  && echo ". /usr/bin/configure-helm.sh" > /root/.ashrc \
  && echo ". /usr/bin/configure-helm.sh" > /root/.bashrc \
- && echo ". /usr/bin/configure-helm.sh" > /root/.profile \
  && rm -rf /root/.cache
 
 ENV ENV="/root/.ashrc"
