@@ -3,8 +3,6 @@ FROM heartysoft/docker-builder-aws:latest
 ENV KUBE_VERSION=1.6.4 \
     HELM_VERSION=2.5.0
 
-COPY configure-helm.sh /usr/bin/
-
 RUN apk update \
  && apk add grep \
  && mkdir -p /tmp/helm \
