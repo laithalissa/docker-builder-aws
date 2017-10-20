@@ -3,7 +3,7 @@ FROM alpine:latest
 ENV HSFT_CLOUD_TOOLKIT_VERSION=0.6.0 \
     AWS_PROFILE_NAME=builder
 
-RUN apk add --update --no-cache curl bash python3 docker libintl zip \
+RUN apk add --update --no-cache curl bash python3 docker libintl zip jq \
   && apk add --virtual gt gettext \ 
   && cp /usr/bin/envsubst /usr/local/bin/envsubst \
   && apk del gt \
