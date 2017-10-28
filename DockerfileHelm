@@ -11,12 +11,8 @@ RUN apk update \
  && mv ./kubectl /usr/bin/kubectl \
  && curl https://storage.googleapis.com/kubernetes-helm/helm-v${HELM_VERSION}-linux-amd64.tar.gz | tar -xzv -C /tmp/helm \
  && mv /tmp/helm/linux-amd64/helm /usr/bin/helm \
- && curl https://raw.githubusercontent.com/heartysoft/cloud-toolkit/$HSFT_CLOUD_TOOLKIT_VERSION/helm/configure-helm.sh -o /usr/bin/configure-helm.sh \
- && chmod +x /usr/bin/configure-helm.sh \
+ && curl https://raw.githubusercontent.com/heartysoft/cloud-toolkit/$HSFT_CLOUD_TOOLKIT_VERSION/helm/helm-functions.sh -o /usr/bin/helm-functions.sh \
+ && curl https://raw.githubusercontent.com/heartysoft/cloud-toolkit/$HSFT_CLOUD_TOOLKIT_VERSION/helm/kubernetes-functions.sh -o /usr/bin/kubernetes-functions.sh \
  && rm -rf /tmp/helm \
  && rm -rf /var/cache/apk/* \
- && echo ". /usr/bin/configure-helm.sh" > /root/.ashrc \
- && echo ". /usr/bin/configure-helm.sh" > /root/.bashrc \
  && rm -rf /root/.cache
-
-ENV ENV="/root/.ashrc"
