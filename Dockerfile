@@ -11,7 +11,7 @@ RUN apk add --update --no-cache curl bash python3 docker libintl zip jq \
   && ln -s /usr/bin/pip3 /usr/bin/pip \
   && ln -s /usr/bin/python3 /usr/bin/python \
   && rm -r /usr/lib/python*/ensurepip \
-  && pip3 install --upgrade pip setuptools awscli  \
+  && pip3 install --upgrade pip setuptools awscli docker-compose  \
   && rm -rf /var/cache/apk/* \
   && rm -r /root/.cache \
   && curl https://raw.githubusercontent.com/heartysoft/cloud-toolkit/$HSFT_CLOUD_TOOLKIT_VERSION/aws/aws-functions.sh -o /usr/bin/aws-functions.sh \
