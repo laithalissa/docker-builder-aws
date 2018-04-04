@@ -6,8 +6,7 @@ script:
 - chmod +x build.sh && ./build.sh 
 deploy:
   provider: script
-  script: docker login -e="$DOCKER_EMAIL"
-    -u="$DOCKER_USER" -p="$DOCKER_PASS" && docker push $REPO
+  script: docker login -u="$DOCKER_USER" -p="$DOCKER_PASS" && docker push $REPO
   on:
     tags: true
 env:
