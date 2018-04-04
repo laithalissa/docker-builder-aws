@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ENV HSFT_CLOUD_TOOLKIT_VERSION=0.10.1 \
+ENV HSFT_CLOUD_TOOLKIT_VERSION=0.10.2 \
     AWS_PROFILE_NAME=builder
 
 RUN apk add --update --no-cache curl bash python3 docker libintl zip jq \
