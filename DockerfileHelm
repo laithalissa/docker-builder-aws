@@ -1,7 +1,7 @@
 FROM heartysoft/docker-builder-aws:latest
 
-ENV KUBE_VERSION=1.6.4 \
-    HELM_VERSION=2.5.0
+ENV KUBE_VERSION=1.10.0 \
+    HELM_VERSION=2.8.2
 
 RUN apk update \
  && apk add grep \
