@@ -3,7 +3,7 @@ services:
 - docker
 script:
 - export REPO=heartysoft/docker-builder-aws
-- chmod +x build.sh && ./build.sh 
+- chmod +x build.sh && ./build.sh
 deploy:
   provider: script
   script: docker login -u="$DOCKER_USER" -p="$DOCKER_PASS" && docker push $REPO

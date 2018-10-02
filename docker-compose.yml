@@ -2,9 +2,8 @@ version: "3"
 
 services:
   builder:
-    build: 
-      context: .
-      dockerfile: Dockerfile
+    build:
+      context: base
     image: foo
     environment:
       - AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
